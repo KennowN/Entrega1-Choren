@@ -1,0 +1,32 @@
+{% extends 'BlogFinal\templates\BlogFinal\base.html' %}
+
+{%load static %}
+
+{% block ContenidoDinamico1%}
+
+<h1 class="fw-bolder">Resultado de tu busqueda</h1>
+
+<body>
+
+    {% if carnicerias %}
+
+    <p> Se encontro: "{{nombre}}"</p>
+
+    <ul>
+        {% for carniceria in carnicerias %}
+        <li>Nombre: {{ carniceria.nombre }}</li>            
+        <li>Calle: {{ carniceria.calle }}</li>
+        <li>Localidad: {{ carniceria.localidad }}</li>
+        <li>Telefono: {{ carniceria.telefono }} </li>
+        {% endfor %}
+    </ul>
+
+    {% else %}
+
+    <p> No se encontro "{{nombre}}"</p>
+    
+    {% endif %}
+
+</body>
+
+{% endblock %}

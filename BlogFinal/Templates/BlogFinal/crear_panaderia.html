@@ -1,0 +1,26 @@
+{% extends 'BlogFinal\templates\BlogFinal\base.html' %}
+
+{%load static %}
+
+{% block ContenidoDinamico1%}
+
+<h1 class="fw-bolder">Agregar panadería</h1>
+
+<h5 class="fw-bolder">
+{% if formulario2.errors %}
+
+<p style="color: red;">Corroborar los datos ingresados</p>
+
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+
+    <table>
+        {{formulario2.as_table}}
+    </table>
+
+    <button type="submit", value="Enviar">Enviar</button>
+</form> 
+</h5>
+
+{% endblock %}

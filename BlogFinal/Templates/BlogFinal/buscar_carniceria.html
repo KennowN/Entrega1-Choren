@@ -1,0 +1,29 @@
+{% extends 'BlogFinal\templates\BlogFinal\Base.html' %}
+
+{%load static %}
+
+{% block ContenidoDinamico1%}
+
+<h1 class="card-title">Carnicerías</h1>
+<p class="card-text">Encontrá las mejores carnicerías de Buenos Aires</p>
+
+{% endblock %}
+
+
+{% block ContenidoDinamico2%}
+
+<a href="#!"><img class="card-img-top" src="https://s.yimg.com/ny/api/res/1.2/Y7a9XPx14uJlnpAy2DLl5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MA--/https://s.yimg.com/os/creatr-images/2019-10/352fce90-e421-11e9-bd2f-63802dd0349b" alt="..." /></a>
+
+<p>
+    <form action="/BlogFinal/buscar_carniceria/" method="GET">
+
+        <input type="text" name="nombre" id="nombre">
+
+        <input type="submit" value="Buscar">
+</p>
+
+{% endblock  %}
+
+{% block ContenidoDinamico3%}
+
+{% endblock %}

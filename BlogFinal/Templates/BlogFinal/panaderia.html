@@ -1,0 +1,43 @@
+{% extends 'BlogFinal\templates\BlogFinal\Base.html' %}
+
+{%load static %}
+
+{% block ContenidoDinamico1%}
+
+<h1 class="card-title">Panaderías</h1>
+<p class="card-text">Encontrá las mejores panaderías de Buenos Aires</p>
+
+{% endblock %}
+
+
+{% block ContenidoDinamico2%}
+
+<a href="#!"><img class="card-img-top" src="https://thefoodtech.com/wp-content/uploads/2021/12/sector-panaderia-scaled.jpg" alt="..." /></a>
+
+        <!-- Testimonials section-->
+        <section class="py-1 border-bottom">
+            <div class="container px-1 my-1 px-1">
+                <div class="text-center mb-1">
+                    <h2 class="fw-bolder">Panaderías</h2>
+                </div>
+
+
+                <a class="text-decoration-none" href="{% url 'Agregar panaderia' %}">
+                    Agregar Panaderias
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <p>
+                    <form action="/BlogFinal/buscar_panaderia/" method="GET">
+                
+                        <input type="text" name="nombre" id="nombre">
+                
+                        <input type="submit" value="Buscar">
+                </p>
+{% endblock  %}
+
+
+
+{% block ContenidoDinamico3%}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'BlogFinal\templates\BlogFinal\Base.html' %}
+
+{%load static %}
+
+{% block ContenidoDinamico1%}
+
+<h1 class="card-title">Verdulerías</h1>
+<p class="card-text">Encontrá las mejores verdulerías de Buenos Aires</p>
+
+{% endblock %}
+
+{% block ContenidoDinamico2%}
+
+<a href="#!"><img class="card-img-top" src="https://ss-static-01.esmsv.com/id/96976/galeriaimagenes/obtenerimagen/?id=159&tipoEscala=stretch&width=1836&height=693" alt="..." /></a>
+
+        <!-- Testimonials section-->
+        <section class="py-1 border-bottom">
+            <div class="container px-1 my-1 px-1">
+                <div class="text-center mb-1">
+                    <h2 class="fw-bolder">Verdulerías</h2>
+                </div>
+
+                
+                <a class="text-decoration-none" href="{% url 'Agregar verduleria' %}">
+                    Agregar Verdulería
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <p>
+                    <form action="/BlogFinal/buscar_verduleria/" method="GET">
+                
+                        <input type="text" name="nombre" id="nombre">
+                
+                        <input type="submit" value="Buscar">
+                </p>
+{% endblock  %}
+
+{% block ContenidoDinamico3%}
+
+{% endblock %}
